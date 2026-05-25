@@ -39,7 +39,7 @@ const loaderEl = document.createElement('div');
 loaderEl.id = 'loader';
 loaderEl.innerHTML = `
   <div class="loader-inner">
-    <img src="logo-full.png" alt="ВАША КОМПАНИЯ" style="width:clamp(260px,60vw,500px);height:auto;object-fit:contain;margin-bottom:16px">
+    <img src="logo-full.png" alt="ВАША КОМПАНИЯ" style="width:clamp(120px,30vw,240px);height:auto;object-fit:contain;margin-bottom:16px">
     <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
     <div class="loader-pct" id="loader-pct">0%</div>
   </div>`;

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЗКСK — Застройщик Курортов Северного Кавказа</title>
+  <meta name="description" content="Строительство и реставрация зданий на территории курортов Северного Кавказа. Жилые комплексы, коммерческая недвижимость, инфраструктура СКФО.">
+  <meta property="og:title" content="Застройщик Курортов Северного Кавказа">
+  <meta property="og:description" content="Строительство и реставрация зданий на курортах СКФО">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loader is created dynamically by app.js with progress bar -->
+
+  <!-- CANVAS -->
+  <canvas id="scrollCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <img src="logo-nav.png" alt="Застройщик Курортов Северного Кавказа" class="logo-img">
+      </a>
+      <nav class="desktop-nav">
+        <a class="nav-link" data-page="0">Главная</a>
+        <a class="nav-link" data-page="1">О компании</a>
+        <a class="nav-link" data-page="2">Направления</a>
+        <a class="nav-link" data-page="3">Портфолио</a>
+        <a class="nav-link" data-page="4">Преимущества</a>
+        <a class="nav-link" data-page="5">География</a>
+        <a class="nav-link" data-page="6">Контакты</a>
+      </nav>
+      <a href="#contacts" class="header-cta">Обсудить проект</a>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a class="nav-link" data-page="0">Главная</a>
+      <a class="nav-link" data-page="1">О компании</a>
+      <a class="nav-link" data-page="2">Направления</a>
+      <a class="nav-link" data-page="3">Портфолио</a>
+      <a class="nav-link" data-page="4">Преимущества</a>
+      <a class="nav-link" data-page="5">География</a>
+      <a class="nav-link" data-page="6">Контакты</a>
+    </nav>
+  </header>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="scroll-indicator" id="scroll-indicator">
+    <div class="scroll-arrow"></div>
+    <span class="scroll-text">Скролл</span>
+  </div>
+
+  <!-- UI LAYER -->
+  <div id="ui-layer">
+
+    <!-- PAGE 0: HERO -->
+    <section class="page is-active" id="page-0">
+      <div class="page-inner hero-content">
+        <img src="logo-full.png" alt="Застройщик Курортов Северного Кавказа" class="hero-logo">
+        <div class="hero-title">
+          <span class="hero-line1">Застройщик Курортов<br>Северного Кавказа</span>
+          <span class="hero-line2">Строительство &bull; Реставрация &bull; Инфраструктура</span>
+        </div>
+        <p class="hero-sub">Возводим и восстанавливаем здания на территории курортов СКФО — от жилых комплексов до объектов культурного наследия</p>
+        <div class="hero-buttons">
+          <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
+          <a href="#" class="btn btn-outline" data-page="2">Наши направления</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Лет опыта</span></div>
+          <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Объектов</span></div>
+          <div class="stat"><span class="stat-num">500K</span><span class="stat-label">м² построено</span></div>
+          <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Специалистов</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 1: О КОМПАНИИ -->
+    <section class="page" id="page-1">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">О компании</span>
+          <h2 class="section-title">Надёжный партнёр<br>в строительстве</h2>
+          <p class="section-sub">Мы специализируемся на строительстве и реставрации зданий различного назначения на территории Северо-Кавказского федерального округа</p>
+        </div>
+        <div class="about-layout">
+          <div>
+            <p class="about-lead">ООО «Застройщик Курортов Северного Кавказа» — компания полного цикла, осуществляющая строительство и реставрацию объектов недвижимости в курортных зонах СКФО.</p>
+            <p class="about-text">Наша команда сочетает глубокое знание региональной специфики с современными строительными технологиями. Мы работаем с объектами различной сложности — от жилых домов до исторических памятников архитектуры, требующих деликатного подхода к реставрации.</p>
+          </div>
+          <div class="about-cards">
+            <div class="card">
+              <div class="card-icon">🏗️</div>
+              <h3>Полный цикл</h3>
+              <p>От проектирования до ввода в эксплуатацию</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">📐</div>
+              <h3>Проектирование</h3>
+              <p>Собственное архитектурное бюро</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🔧</div>
+              <h3>Своя техника</h3>
+              <p>Парк строительной техники и оборудования</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">✅</div>
+              <h3>Гарантия</h3>
+              <p>Гарантийное обслуживание каждого объекта</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: НАПРАВЛЕНИЯ -->
+    <section class="page" id="page-2">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">Направления</span>
+          <h2 class="section-title">Что мы строим</h2>
+          <p class="section-sub">Четыре ключевых направления, в которых мы накопили уникальную экспертизу</p>
+        </div>
+        <div class="directions-grid">
+          <div class="card direction-card">
+            <div class="card-icon">🏔️</div>
+            <h3>Курортное строительство</h3>
+            <p>Гостиничные комплексы, санатории, SPA-центры и объекты курортной инфраструктуры. Строим с учётом горного рельефа и климатических особенностей региона.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🏢</div>
+            <h3>Жилые комплексы</h3>
+            <p>Многоквартирные дома, таунхаусы и коттеджные посёлки. Современные планировки, энергоэффективные технологии и качественные материалы.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🏛️</div>
+            <h3>Реставрация объектов</h3>
+            <p>Восстановление исторических зданий и памятников архитектуры. Бережный подход к культурному наследию с применением аутентичных материалов и методов.</p>
+          </div>
+          <div class="card direction-card">
+            <div class="card-icon">🛣️</div>
+            <h3>Инфраструктура</h3>
+            <p>Дорожное строительство, инженерные сети, благоустройство территорий. Создаём комфортную среду для жителей и гостей курортов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: ГАЛЕРЕЯ -->
+    <section class="page gallery-page" id="page-3">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">Портфолио</span>
+          <h2 class="section-title">Наши объекты</h2>
+          <p class="section-sub">Реализованные проекты строительства и реставрации на курортах Северного Кавказа</p>
+        </div>
+        <div class="carousel-container" id="carousel-container">
+          <button class="carousel-arrow carousel-arrow-left" id="carousel-prev" aria-label="Назад">‹</button>
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-card" data-index="0"><img src="gallery/photo_01.webp" alt="Объект 1"></div>
+            <div class="carousel-card" data-index="1"><img src="gallery/photo_02.webp" alt="Объект 2"></div>
+            <div class="carousel-card" data-index="2"><img src="gallery/photo_03.webp" alt="Объект 3"></div>
+            <div class="carousel-card" data-index="3"><img src="gallery/photo_04.webp" alt="Объект 4"></div>
+            <div class="carousel-card" data-index="4"><img src="gallery/photo_05.webp" alt="Объект 5"></div>
+            <div class="carousel-card" data-index="5"><img src="gallery/photo_06.webp" alt="Объект 6"></div>
+            <div class="carousel-card" data-index="6"><img src="gallery/photo_07.webp" alt="Объект 7"></div>
+            <div class="carousel-card" data-index="7"><img src="gallery/photo_08.webp" alt="Объект 8"></div>
+            <div class="carousel-card" data-index="8"><img src="gallery/photo_09.webp" alt="Объект 9"></div>
+            <div class="carousel-card" data-index="9"><img src="gallery/photo_10.webp" alt="Объект 10"></div>
+            <div class="carousel-card" data-index="10"><img src="gallery/photo_11.webp" alt="Объект 11"></div>
+            <div class="carousel-card" data-index="11"><img src="gallery/photo_12.webp" alt="Объект 12"></div>
+            <div class="carousel-card" data-index="12"><img src="gallery/photo_13.webp" alt="Объект 13"></div>
+            <div class="carousel-card" data-index="13"><img src="gallery/photo_14.webp" alt="Объект 14"></div>
+            <div class="carousel-card" data-index="14"><img src="gallery/photo_15.webp" alt="Объект 15"></div>
+            <div class="carousel-card" data-index="15"><img src="gallery/photo_16.webp" alt="Объект 16"></div>
+            <div class="carousel-card" data-index="16"><img src="gallery/photo_17.webp" alt="Объект 17"></div>
+            <div class="carousel-card" data-index="17"><img src="gallery/photo_18.webp" alt="Объект 18"></div>
+            <div class="carousel-card" data-index="18"><img src="gallery/photo_19.webp" alt="Объект 19"></div>
+            <div class="carousel-card" data-index="19"><img src="gallery/photo_20.webp" alt="Объект 20"></div>
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" id="carousel-next" aria-label="Вперёд">›</button>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: ПРЕИМУЩЕСТВА -->
+    <section class="page" id="page-4">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">Преимущества</span>
+          <h2 class="section-title">Почему выбирают нас</h2>
+          <p class="section-sub">Наш подход к каждому проекту основан на принципах качества, надёжности и прозрачности</p>
+        </div>
+        <div class="advantages-grid">
+          <div class="card">
+            <div class="advantage-num">01</div>
+            <h3>Собственная техника</h3>
+            <p>Полный парк строительной техники — от экскаваторов до башенных кранов. Не зависим от субподрядчиков.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">02</div>
+            <h3>Квалифицированные кадры</h3>
+            <p>Штат из 50+ специалистов с опытом работы в горных и курортных условиях. Регулярное повышение квалификации.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">03</div>
+            <h3>Гарантия качества</h3>
+            <p>Трёхступенчатый контроль качества на каждом этапе. Применяем сертифицированные материалы ведущих производителей.</p>
+          </div>
+          <div class="card">
+            <div class="advantage-num">04</div>
+            <h3>Соблюдение сроков</h3>
+            <p>98% проектов сданы вовремя. Детальное планирование и прозрачная отчётность на каждом этапе строительства.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: ГЕОГРАФИЯ -->
+    <section class="page" id="page-5">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">География</span>
+          <h2 class="section-title">Работаем по всему СКФО</h2>
+          <p class="section-sub">Наши объекты расположены в самых живописных и востребованных курортных зонах Северного Кавказа</p>
+        </div>
+        <div class="geo-layout">
+          <div>
+            <p class="geo-text">Мы работаем во всех ключевых курортных зонах Северо-Кавказского федерального округа. Знаем местную специфику — от особенностей грунтов до климатических условий каждого региона.</p>
+            <div class="geo-regions">
+              <span class="geo-tag">Кавказские Минеральные Воды</span>
+              <span class="geo-tag">Приэльбрусье</span>
+              <span class="geo-tag">Архыз</span>
+              <span class="geo-tag">Домбай</span>
+              <span class="geo-tag">Теберда</span>
+              <span class="geo-tag">Кисловодск</span>
+              <span class="geo-tag">Пятигорск</span>
+              <span class="geo-tag">Ессентуки</span>
+              <span class="geo-tag">Железноводск</span>
+              <span class="geo-tag">Осетия</span>
+            </div>
+          </div>
+          <div class="geo-stats">
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">9+</div>
+              <div class="geo-stat-label">Регионов присутствия</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">120+</div>
+              <div class="geo-stat-label">Завершённых объектов</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">15+</div>
+              <div class="geo-stat-label">Лет в регионе</div>
+            </div>
+            <div class="card geo-stat-card">
+              <div class="geo-stat-num">98%</div>
+              <div class="geo-stat-label">Объектов в срок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: КОНТАКТЫ -->
+    <section class="page" id="page-6">
+      <div class="page-inner">
+        <div style="text-align:center">
+          <span class="section-label">Контакты</span>
+          <h2 class="section-title">Обсудим ваш проект</h2>
+          <p class="section-sub">Свяжитесь с нами для бесплатной консультации и расчёта стоимости вашего проекта</p>
+        </div>
+        <div class="contacts-layout">
+          <div class="contact-info-card">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Телефон</div>
+                <div class="contact-value"><a href="tel:+79054111839">+7 (905) 411-18-39</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:info@zksk.ru">info@zksk.ru</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Адрес</div>
+                <div class="contact-value">г. Пятигорск, ул. Энгельса, д. 50, 3 этаж</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-label">Режим работы</div>
+                <div class="contact-value">Пн–Пт: 9:00–18:00</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <form class="contact-form card" id="contact-form" onsubmit="return false">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email-input">Email</label>
+              <input type="email" id="email-input" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" placeholder="Расскажите о вашем проекте..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;text-align:center">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 ООО «Застройщик Курортов Северного Кавказа». Все права защищены.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

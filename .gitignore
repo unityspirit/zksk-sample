@@ -1,0 +1,7 @@
+# ZKSK Site
+# Ignore original JPG frames and videos
+frames/
+videos/
+*.log
+.DS_Store
+Thumbs.db
